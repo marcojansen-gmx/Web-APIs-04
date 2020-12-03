@@ -1,0 +1,78 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Quiz</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Halant:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- Start Navigation -->
+    <div id="controls">
+        <div id="info">
+            <button id="scores" href="">View High Scores</button>
+            <div id="timer">
+                <p>Time: <span id="time">0</span></p>
+            </div>
+        </div>
+    </div>
+    <!-- End Navigation -->
+
+    <div id="positionWrapper">
+        <section id="intro">
+            <h1>The Lord of the Rings Quiz</h1>
+            <p>Try to answer the following questions related to the Lord of the Rings within the time limit.
+                Keep in mind that incorrect answers will penalize your score/time by ten seconds.
+            </p>
+            <button>Start Quiz</button>
+
+        </section>
+        <!-- Placeholder question -->
+        <section id="quizContainer" class="hide">
+            <p id="title"></p>
+            <!-- Buttons placeholder for answers-->
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <div id="scoreIndicator" class="invisible">
+                <p>&nbsp;</p>
+            </div>
+        </section>
+
+        <!-- start placeholder end result -->
+        <section id="finish" class="hide">
+            <h1>All Done</h1>
+            <p>Your final score is&nbsp;<span id="score"></span></p>
+            <div id="records">
+                <p>Enter initials: </p><input id="initials" type="text"> <button>Submit</button>
+            </div>
+            <div id="errorIndicator" class="invisible">
+                <p>&nbsp;</p>
+            </div>
+        </section>
+        <!-- end placeholder end result -->
+
+        <!-- start Highscore section -->
+        <section id="highScores" class="hide">
+            <h1>High Scores</h1>
+            <div>
+
+            </div>
+            <button id="reset">Go Back</button> <button id="clearScores">Clear Highscores</button>
+        </section>
+        <!-- end Highscore section -->
+    </div>
+
+
+    <script src="assets.js"></script>
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
