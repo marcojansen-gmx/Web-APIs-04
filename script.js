@@ -15,6 +15,44 @@
     
 
 
+	//// //// quiz init and timer //// ////
+
+	// start time and provide questions on intro button click
+	let clock;
+	queryElement("#intro button").addEventListener("click", (event) => {
+		//call above function to set Initial data in questionHolder section
+		setQuestionData();
+		onlyDisplaySection("#quizContainer");
+		clock = setInterval(myTimer, 1000);
+	});
+
+	// clearing timeout in case next question was answered before timeout is reached or if form element does not meet requirement
+
+	let scoreIndicator = () => {
+		clearTimeout(timeset);
+		timeset = setTimeout(() => {
+		    queryElement('#scoreIndicator').classList.add('invisible');
+		}, 1000);
+	}
+
+	//////////////////// quiz control ////////////////////
+
+	// Create an array of selected divs to utilize this on them so that their values can be checked against the answers
+	Array.from(answers).forEach(check => {
+		check.addEventListener('click', function (event) {
+			// Handles events if a question is answered correctly
+			if (this.innerHTML.substring(3, this.length) === questions[questionCounter].answer) {
+				score = score + 1;
+				questionCounter = questionCounter + 1;
+				quizUpdate("Your answer ist correct");
+			}else{
+				// Handles events if a question is answered incorrectly.
+				time = time - 15;
+				questionCounter = questionCounter + 1;
+				quizUpdate("Your answer is incorrect");
+			}
+		});
+	});
 
 
     //// //// submitting scores ////  ////
