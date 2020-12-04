@@ -14,6 +14,52 @@
     (localStorage.getItem('highscoreArray')) ? highscoreArray = JSON.parse(localStorage.getItem('highscoreArray')): highscoreArray = [];
     
 
+	// FUNC to set the question data in questionHolder section
+	let setQuestionData = () => {
+		queryElement('#quizContainer p').innerHTML = questions[questionCounter].title;
+		queryElement('#quizContainer button:nth-of-type(1)').innerHTML = `1. ${questions[questionCounter].choices[0]}`;
+		queryElement('#quizContainer button:nth-of-type(2)').innerHTML = `2. ${questions[questionCounter].choices[1]}`;
+		queryElement('#quizContainer button:nth-of-type(3)').innerHTML = `3. ${questions[questionCounter].choices[2]}`;
+		queryElement('#quizContainer button:nth-of-type(4)').innerHTML = `4. ${questions[questionCounter].choices[3]}`;
+	}
+
+	//FUNC next question and evalutalion right or wrong
+	let quizUpdate = (answerCopy) => {
+		queryElement('#scoreIndicator p').innerHTML = answerCopy;
+		queryElement('#scoreIndicator').classList.remove('invisible', scoreIndicator());
+		Array.from(answers).forEach(answer =>
+		{
+			answer.classList.add('disable');
+		});
+
+		// If all the questions are answered exit quiz
+		setTimeout(() => {
+			if (questionCounter === questions.length) {
+				onlyDisplaySection("#finish");
+				time = 0;
+				queryElement('#time').innerHTML = time;
+			} else {
+				// Updates copy in questions with the net array's question text.
+				setQuestionData();
+				// Removed disabled status.
+				Array.from(answers).forEach(answer => {
+					answer.classList.remove('disable');
+				});
+			}
+		}, 1000);
+	}
+
+	// FUNC handles time related events for the quiz
+	let myTimer = () => {
+		if (time > 0) {
+			time = time - 1;
+			queryElement('#time').innerHTML = time;
+		} else {
+			clearInterval(clock);
+			queryElement('#score').innerHTML = score;
+			onlyDisplaySection("#finish");
+		}
+	}
 
 	//// //// quiz init and timer //// ////
 
@@ -53,7 +99,6 @@
 			}
 		});
 	});
-
 
     //// //// submitting scores ////  ////
 	// Displays error message if initials given do not meet requirements
