@@ -1,8 +1,9 @@
-// Set init variables 
-const startTimer = 75;
-let time = 75;
-let score = 0;
-let questionCounter = 0;
+$(document).ready(function() {
+	// Set init variables 
+	const startTimer = 75;
+	let time = 75;
+	let score = 0;
+	let questionCounter = 0;
 let timeset;
 let answers = document.querySelectorAll('#quizContainer button');
 
@@ -191,4 +192,6 @@ queryElement("#clearScores").addEventListener("click", () => {
 	highscoreArray = [];
 	queryElement('#highScores div').innerHTML = "";
 	localStorage.removeItem('highscoreArray');
+});
+
 });
