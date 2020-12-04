@@ -15,12 +15,12 @@ let highscoreArray = [];
 	
 
 //// //// functions declarations ////  ////
-// FUNC to more quickly call elements less typing means less chance for errors
+// FUNC to more quick call of elements
 let queryElement = (element) => {
 return document.querySelector(element);
 }
 	
-// FUNC to hide all sections then unhide the one provided by the parameter
+// FUNC hide all sections >> unhide handed over by parameter
 let onlyDisplaySection = (element) => {
 let sections = document.querySelectorAll("section");
 Array.from(sections).forEach((userItem) => {
@@ -131,6 +131,25 @@ Array.from(answers).forEach(check => {
 			quizUpdate("Your answer is incorrect");
 		}
 	});
+});
+
+// Resets all quiz settings to the default to replay the quiz
+queryElement("#reset").addEventListener("click", () => {
+	time = startTimer;
+	score = 0;
+	questionCounter = 0;
+	onlyDisplaySection("#intro");
+});
+	// view high scores button in the html abandon all progress and view high score
+queryElement("#scores").addEventListener("click", (event) => {
+	event.preventDefault();
+	clearInterval(clock);
+	queryElement('#time').innerHTML = 0;
+	time = startTimer;
+	score = 0;
+	questionCounter = 0;
+	onlyDisplaySection("#highScores");
+	highscoreHtmlReset();
 });
 
 //// //// submitting scores ////  ////
