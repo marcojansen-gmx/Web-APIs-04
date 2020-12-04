@@ -38,3 +38,97 @@ body {
   .disable{
   pointer-events:none;
   }
+  /* styles for sections*/
+
+#positionWrapper{
+    display: flex;
+    justify-content: center;
+    min-height: 100%;
+    flex-direction: column;
+  }
+  
+  section{
+    margin: 0 auto;
+  }
+  
+  #controls{
+    background-color: rgb(11, 11, 167);
+  }
+  
+  #info{
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    color: white;
+    max-width:800px;
+    display:flex;
+    padding: 16px 30px;
+  }
+  
+  #scores{
+    left:40px;
+    background-color: blue;
+    color: white;
+  }
+  
+  #timer{
+    right:40px;
+  }
+  
+  #intro{
+    text-align:center;
+  }
+  
+  button{
+    background-color: blue;
+    color:white;
+    border: none;
+    padding:5px;
+    border-radius: 5px;
+    cursor:pointer;
+  }
+  
+  #intro button:hover{
+    background-color: blue;
+  }
+  
+  /* quiz container */
+  #quizContainer #title{
+    font-weight:700;
+  }
+  
+  #quizContainer button{
+    background-color: blue;
+    width: 100%;
+    border-radius:15px;
+    cursor:pointer;
+    display: block;
+    color:white;
+    margin: 5px 0;
+    padding: 10px 10px ;
+    text-align: center;
+  }
+  
+  #quizContainer button:hover{
+    background-color: lightblue;
+    ;
+  }
+  
+  /* score indicator */
+  #scoreIndicator, #errorIndicator{
+    border-top: 1px solid #999;
+    color: lightblue;
+    font-size: 1.3em;
+    margin: 10px auto;
+    margin: 0;
+    font-weight:700;
+  }
+  
+  #scoreIndicator p, #errorIndicator p{
+  margin:0;
+  margin-top:10px;
+  }
+  
+  #records input, #records button{
+  margin-top:5px;
+  }
