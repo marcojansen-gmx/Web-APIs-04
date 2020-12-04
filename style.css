@@ -26,3 +26,15 @@ body {
     margin:10px 0;
   }
   
+  /* class styles to hide elements */
+.hide{
+    display:none;
+  }
+  
+  .invisible{
+    visibility:hidden;
+  }
+  
+  .disable{
+  pointer-events:none;
+  }
