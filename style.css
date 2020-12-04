@@ -1,0 +1,28 @@
+/* styles body and hero*/
+body {
+    background-image: url("assets/RedBook.jpg");
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  html,body{
+    font-family: font-family: 'Halant', serif;
+    color: white;
+    height:100%;
+  }
+  
+  /* area specific styles */
+  #highScores div div{
+    padding: 5px;
+  }
+  
+  #highScores div div:nth-child(odd){
+    background-color: white;
+    color: black;
+  }
+  
+  #highScores button{
+    margin:10px 0;
+  }
+  
