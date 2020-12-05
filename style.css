@@ -4,14 +4,24 @@ body {
     background-color: #cccccc;
     background-repeat: no-repeat;
     background-size: cover;
+    font-size: larger;
   }
   
   html,body{
-    font-family: font-family: 'Halant', serif;
+    font-family: 'Halant', serif;
     color: white;
     height:100%;
   }
   
+  h1{
+    background-color: rgb(11, 11, 167);
+  }
+
+    
+  p{
+    background-color: rgb(11, 11, 167);
+  }
+
   /* area specific styles */
   #highScores div div{
     padding: 5px;
@@ -26,6 +36,10 @@ body {
     margin:10px 0;
   }
   
+  #highScores button:hover{
+    background-color: rgb(86, 156, 235);
+  }
+    
   /* class styles to hide elements */
 .hide{
     display:none;
@@ -44,7 +58,7 @@ body {
     display: flex;
     justify-content: center;
     min-height: 100%;
-    flex-direction: column;
+    flex-direction: column;  
   }
   
   section{
@@ -67,8 +81,12 @@ body {
   
   #scores{
     left:40px;
-    background-color: blue;
+    background-color: rgb(40, 40, 194);
     color: white;
+  }
+
+  #scores:hover{
+    background-color: rgb(86, 156, 235);
   }
   
   #timer{
@@ -80,16 +98,16 @@ body {
   }
   
   button{
-    background-color: blue;
+    background-color: rgb(11, 11, 167);
     color:white;
     border: none;
-    padding:5px;
+    padding:15px;
     border-radius: 5px;
     cursor:pointer;
   }
   
   #intro button:hover{
-    background-color: blue;
+    background-color: rgb(86, 156, 235);
   }
   
   /* quiz container */
@@ -98,7 +116,7 @@ body {
   }
   
   #quizContainer button{
-    background-color: blue;
+    background-color: rgb(11, 11, 167);
     width: 100%;
     border-radius:15px;
     cursor:pointer;
@@ -110,8 +128,7 @@ body {
   }
   
   #quizContainer button:hover{
-    background-color: lightblue;
-    ;
+    background-color:  rgb(86, 156, 235);
   }
   
   /* score indicator */
@@ -147,6 +164,10 @@ body {
   
     #finish #records input, #finish #records button{
       margin-left:10px;
+    }
+
+    #finish #records input, #finish #records button:hover{
+      background-color:  rgb(86, 156, 235);
     }
   
     #info{
