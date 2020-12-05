@@ -41,4 +41,4 @@ https://github.com/marcojansen-gmx/Web-APIs-04.git
 
 The following image shows the web application's appearance and functionality:
 
-![Quiz (layout)](https://github.com/marcojansen-gmx/Web-APIs-04/blob/main/blob/main/Assets/screenshot.png?raw=true)
+![Quiz (layout)](https://github.com/marcojansen-gmx/Web-APIs-04/blob/main/blob/main/Assets/screenshot.png)
