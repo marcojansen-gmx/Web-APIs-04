@@ -1,4 +1,5 @@
-$(document).ready(function() {
+window.addEventListener('DOMContentLoaded', (event) => {
+
 	// Set init variables 
 	const startTimer = 75;
 	let time = 75;
