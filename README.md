@@ -41,4 +41,4 @@ https://github.com/marcojansen-gmx/Web-APIs-04.git
 
 The following image shows the web application's appearance and functionality:
 
-![password generator (layout)](https://github.com/marcojansen-gmx/Java-Script-03/blob/main/Assets/screenshot.png?raw=true)
+![Quiz (layout)](https://github.com/marcojansen-gmx/Java-Script-03/blob/main/Assets/screenshot.png?raw=true)
