@@ -1,45 +1,48 @@
-# 04 Web APIs: Code Quiz
+# 03 JavaScript: Password Generator
 
 ## Your Task
 
-As you proceed in your journey to becoming a full-stack web developer, it’s likely that you’ll be asked to complete a coding assessment, perhaps as part of an interview process. A typical coding assessment is a combination of multiple-choice questions and interactive coding challenges. 
-
-To help you become familiar with these tests and give you a chance to apply the skills from this module, this week’s homework invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. This week’s coursework will teach you all the skills you need to succeed in this assignment.
+I need to modify starter code and create a password generator. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that I write. It will have a clean and polished user interface that is responsive, ensuring that it adapts to multiple screen sizes. I will also attempt to improve any bad UX where possible.
 
 ## User Story
 
 ```
-AS A coding boot camp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
+AS AN employee with access to sensitive data
+I WANT to randomly generate a password that meets certain criteria
+SO THAT I can create a strong password that provides greater security
 ```
+
 ## Acceptance Criteria
 
 ```
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and score
+GIVEN I need a new, secure password
+WHEN I click the button to generate a password
+THEN I am presented with a series of prompts for password criteria
+WHEN prompted for password criteria
+THEN I select which criteria to include in the password
+WHEN prompted for the length of the password
+THEN I choose a length of at least 8 characters and no more than 128 characters
+WHEN prompted for character types to include in the password
+THEN I choose lowercase, uppercase, numeric, and/or special characters
+WHEN I answer each prompt
+THEN my input should be validated and at least one character type should be selected
+WHEN all prompts are answered
+THEN a password is generated that matches the selected criteria
+WHEN the password is generated
+THEN the password is either displayed in an alert or written to the page
+```
 
 ## Installation
 
 Deployment URL
 
-https://marcojansen-gmx.github.io/Web-APIs-04/index.html
+https://marcojansen-gmx.github.io/Java-Script-03/index.html
 
 GitHub URL
 
-https://github.com/marcojansen-gmx/Web-APIs-04.git
-
+https://github.com/marcojansen-gmx/Java-Script-03.git
 ## Mock-Up
 
 The following image shows the web application's appearance and functionality:
 
-![04 Web APIs: Code Quiz (layout)](https://github.com/marcojansen-gmx/Web-APIs-04/blob/main/screenshot.png?raw=true)
+![password generator (layout)](https://github.com/marcojansen-gmx/Java-Script-03/blob/main/Assets/Javascript.png?raw=true)
