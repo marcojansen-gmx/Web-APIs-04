@@ -37,6 +37,7 @@ https://marcojansen-gmx.github.io/Web-APIs-04/index.html
 GitHub URL
 
 https://github.com/marcojansen-gmx/Web-APIs-04.git
+
 ## Mock-Up
 
 The following image shows the web application's appearance and functionality:
